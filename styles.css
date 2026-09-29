@@ -1,1 +1,135 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    font-size: 18px;
+    color: #2D3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-column: 1 / 3;
+    background-color: #3C8527;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    padding: 40px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 39px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+main {
+    grid-column: 1;
+    padding: 30px 50px;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+article h2 {
+    font-size: 34px;
+    color: #28651C;
+    margin-bottom: 5px;
+}
+
+.post-info {
+    color: #667267;
+    font-style: italic;
+}
+
+.post-image-left {
+    float: left;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 20px 10px 0;
+}
+
+.post-image-right {
+    float: right;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 0 10px 20px;
+}
+
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+aside {
+    grid-column: 2;
+    padding: 30px;
+}
+
+aside section {
+    margin-bottom: 30px;
+}
+
+aside h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+aside section:first-child {
+    background-color: #E2E8F0;
+    padding: 20px;
+}
+
+aside section:first-child h3 {
+    color: #333322;
+}
+
+aside section:nth-child(2) h3,
+aside section:nth-child(3) h3 {
+    color: #28651C;
+}
+
+aside a {
+    color: #2879B8;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    grid-column: 1 / 3;
+    background-color: #28651C;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
